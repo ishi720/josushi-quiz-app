@@ -9,7 +9,6 @@ import {
   Animated,
 } from 'react-native';
 
-// 助数詞データ（50問）
 const quizData = [
   // 本（細長いもの）
   { item: "鉛筆", reading: "えんぴつ", answer: "本", choices: ["本", "枚", "個", "匹"] },
@@ -71,7 +70,6 @@ const quizData = [
   { item: "兎", reading: "うさぎ", answer: "羽", choices: ["羽", "匹", "頭", "本"] },
   { item: "鳩", reading: "はと", answer: "羽", choices: ["羽", "匹", "頭", "枚"] },
   { item: "蝶", reading: "ちょう", answer: "羽", choices: ["羽", "匹", "頭", "枚"] },
-  // === 難易度高め（50問）===
   // 杯（イカ・タコ・船）
   { item: "烏賊", reading: "いか", answer: "杯", choices: ["杯", "匹", "本", "頭"] },
   { item: "蛸", reading: "たこ", answer: "杯", choices: ["杯", "匹", "本", "頭"] },
@@ -167,6 +165,118 @@ const quizData = [
   // 条（法律・川）
   { item: "法律", reading: "ほうりつ", answer: "条", choices: ["条", "本", "件", "項"] },
   { item: "川", reading: "かわ", answer: "条", choices: ["条", "本", "筋", "流"] },
+  // 着（服）
+  { item: "シャツ", reading: "シャツ", answer: "着", choices: ["着", "枚", "本", "領"] },
+  { item: "コート", reading: "コート", answer: "着", choices: ["着", "枚", "本", "領"] },
+  { item: "着物", reading: "きもの", answer: "着", choices: ["着", "枚", "領", "反"] },
+  { item: "ドレス", reading: "ドレス", answer: "着", choices: ["着", "枚", "本", "領"] },
+  { item: "セーター", reading: "セーター", answer: "着", choices: ["着", "枚", "本", "個"] },
+  // 足（靴・靴下）
+  { item: "靴", reading: "くつ", answer: "足", choices: ["足", "個", "双", "本"] },
+  { item: "靴下", reading: "くつした", answer: "足", choices: ["足", "枚", "双", "本"] },
+  { item: "スリッパ", reading: "スリッパ", answer: "足", choices: ["足", "個", "双", "組"] },
+  { item: "下駄", reading: "げた", answer: "足", choices: ["足", "個", "双", "本"] },
+  { item: "草履", reading: "ぞうり", answer: "足", choices: ["足", "個", "双", "枚"] },
+  // 束（花・野菜）
+  { item: "花束", reading: "はなたば", answer: "束", choices: ["束", "本", "輪", "房"] },
+  { item: "ほうれん草", reading: "ほうれんそう", answer: "束", choices: ["束", "本", "株", "把"] },
+  { item: "藁", reading: "わら", answer: "束", choices: ["束", "本", "把", "個"] },
+  { item: "薪", reading: "まき", answer: "束", choices: ["束", "本", "個", "山"] },
+  // 房（ぶどう・バナナ）
+  { item: "葡萄", reading: "ぶどう", answer: "房", choices: ["房", "個", "粒", "束"] },
+  { item: "バナナの房", reading: "バナナのふさ", answer: "房", choices: ["房", "本", "束", "個"] },
+  // 粒（米・豆・薬）
+  { item: "米", reading: "こめ", answer: "粒", choices: ["粒", "個", "本", "杯"] },
+  { item: "豆", reading: "まめ", answer: "粒", choices: ["粒", "個", "本", "匹"] },
+  { item: "真珠", reading: "しんじゅ", answer: "粒", choices: ["粒", "個", "玉", "点"] },
+  { item: "錠剤", reading: "じょうざい", answer: "粒", choices: ["粒", "錠", "個", "服"] },
+  // 玉（キャベツ・レタス）
+  { item: "キャベツ", reading: "キャベツ", answer: "玉", choices: ["玉", "個", "株", "枚"] },
+  { item: "レタス", reading: "レタス", answer: "玉", choices: ["玉", "個", "株", "枚"] },
+  { item: "スイカ", reading: "スイカ", answer: "玉", choices: ["玉", "個", "本", "切"] },
+  // 株（植物）
+  { item: "苗", reading: "なえ", answer: "株", choices: ["株", "本", "個", "束"] },
+  { item: "白菜", reading: "はくさい", answer: "株", choices: ["株", "玉", "個", "本"] },
+  { item: "盆栽", reading: "ぼんさい", answer: "株", choices: ["株", "鉢", "本", "個"] },
+  // 切れ（肉・魚）
+  { item: "刺身", reading: "さしみ", answer: "切れ", choices: ["切れ", "枚", "個", "皿"] },
+  { item: "肉", reading: "にく", answer: "切れ", choices: ["切れ", "枚", "個", "塊"] },
+  { item: "ハム", reading: "ハム", answer: "切れ", choices: ["切れ", "枚", "本", "個"] },
+  // 筋（線・道・光）
+  { item: "光", reading: "ひかり", answer: "筋", choices: ["筋", "本", "条", "線"] },
+  { item: "涙", reading: "なみだ", answer: "筋", choices: ["筋", "滴", "粒", "本"] },
+  { item: "煙", reading: "けむり", answer: "筋", choices: ["筋", "本", "条", "個"] },
+  // 通（手紙・メール）
+  { item: "手紙", reading: "てがみ", answer: "通", choices: ["通", "枚", "封", "本"] },
+  { item: "メール", reading: "メール", answer: "通", choices: ["通", "件", "本", "個"] },
+  { item: "葉書", reading: "はがき", answer: "通", choices: ["通", "枚", "封", "葉"] },
+  // 部（新聞・書類）
+  { item: "新聞", reading: "しんぶん", answer: "部", choices: ["部", "枚", "冊", "紙"] },
+  { item: "書類", reading: "しょるい", answer: "部", choices: ["部", "枚", "通", "冊"] },
+  { item: "コピー", reading: "コピー", answer: "部", choices: ["部", "枚", "冊", "通"] },
+  // 巻（巻物・フィルム）
+  { item: "巻物", reading: "まきもの", answer: "巻", choices: ["巻", "本", "冊", "枚"] },
+  { item: "フィルム", reading: "フィルム", answer: "巻", choices: ["巻", "本", "枚", "個"] },
+  { item: "トイレットペーパー", reading: "トイレットペーパー", answer: "巻", choices: ["巻", "本", "個", "枚"] },
+  // 輪（花・輪ゴム）
+  { item: "輪ゴム", reading: "わゴム", answer: "輪", choices: ["輪", "本", "個", "束"] },
+  { item: "花輪", reading: "はなわ", answer: "輪", choices: ["輪", "個", "束", "本"] },
+  // 缶・瓶・袋・箱
+  { item: "缶詰", reading: "かんづめ", answer: "缶", choices: ["缶", "個", "本", "箱"] },
+  { item: "ビール瓶", reading: "ビールびん", answer: "本", choices: ["本", "瓶", "缶", "個"] },
+  { item: "ポテトチップス", reading: "ポテトチップス", answer: "袋", choices: ["袋", "個", "枚", "箱"] },
+  { item: "菓子箱", reading: "かしばこ", answer: "箱", choices: ["箱", "個", "缶", "袋"] },
+  // 発（弾丸・花火・ロケット）
+  { item: "弾丸", reading: "だんがん", answer: "発", choices: ["発", "個", "本", "粒"] },
+  { item: "花火", reading: "はなび", answer: "発", choices: ["発", "本", "個", "輪"] },
+  { item: "ロケット", reading: "ロケット", answer: "発", choices: ["発", "機", "台", "基"] },
+  // 曲（歌・音楽）
+  { item: "歌", reading: "うた", answer: "曲", choices: ["曲", "首", "本", "番"] },
+  { item: "交響曲", reading: "こうきょうきょく", answer: "曲", choices: ["曲", "番", "楽", "編"] },
+  // 点（作品・得点）
+  { item: "絵画", reading: "かいが", answer: "点", choices: ["点", "枚", "幅", "面"] },
+  { item: "彫刻", reading: "ちょうこく", answer: "点", choices: ["点", "体", "個", "基"] },
+  // 戦（試合）
+  { item: "野球", reading: "やきゅう", answer: "戦", choices: ["戦", "試合", "回", "局"] },
+  { item: "サッカー", reading: "サッカー", answer: "戦", choices: ["戦", "試合", "回", "点"] },
+  // 便（飛行機・郵便）
+  { item: "飛行機", reading: "ひこうき", answer: "便", choices: ["便", "機", "台", "本"] },
+  { item: "郵便", reading: "ゆうびん", answer: "便", choices: ["便", "通", "本", "回"] },
+  // 両・輌（電車）
+  { item: "電車", reading: "でんしゃ", answer: "両", choices: ["両", "台", "本", "輌"] },
+  { item: "貨車", reading: "かしゃ", answer: "両", choices: ["両", "台", "輌", "本"] },
+  // 機（飛行機・機械）
+  { item: "戦闘機", reading: "せんとうき", answer: "機", choices: ["機", "台", "便", "基"] },
+  { item: "ヘリコプター", reading: "ヘリコプター", answer: "機", choices: ["機", "台", "便", "本"] },
+  // 斤（パン）
+  { item: "食パン", reading: "しょくパン", answer: "斤", choices: ["斤", "枚", "個", "本"] },
+  // 尾（魚）
+  { item: "鯛", reading: "たい", answer: "尾", choices: ["尾", "匹", "本", "枚"] },
+  { item: "鮪", reading: "まぐろ", answer: "尾", choices: ["尾", "匹", "本", "頭"] },
+  // 皿（料理）
+  { item: "パスタ", reading: "パスタ", answer: "皿", choices: ["皿", "杯", "個", "品"] },
+  { item: "カレー", reading: "カレー", answer: "皿", choices: ["皿", "杯", "個", "品"] },
+  // 把（包丁・扇子）
+  { item: "扇子", reading: "せんす", answer: "把", choices: ["把", "本", "枚", "面"] },
+  // 連（切手）
+  { item: "切手シート", reading: "きってシート", answer: "連", choices: ["連", "枚", "組", "帖"] },
+  // 幅（掛け軸）
+  { item: "掛け軸", reading: "かけじく", answer: "幅", choices: ["幅", "本", "枚", "巻"] },
+  // 棟（神社・寺）
+  { item: "神社", reading: "じんじゃ", answer: "社", choices: ["社", "軒", "棟", "基"] },
+  { item: "寺", reading: "てら", answer: "寺", choices: ["寺", "軒", "棟", "院"] },
+  // 錠（鍵・薬）
+  { item: "鍵", reading: "かぎ", answer: "本", choices: ["本", "個", "錠", "把"] },
+  { item: "薬の錠剤", reading: "くすりのじょうざい", answer: "錠", choices: ["錠", "粒", "個", "服"] },
+  // 灯（明かり）
+  { item: "提灯", reading: "ちょうちん", answer: "張", choices: ["張", "灯", "個", "本"] },
+  { item: "街灯", reading: "がいとう", answer: "灯", choices: ["灯", "本", "基", "台"] },
+  // 口（人数・寄付）
+  { item: "寄付", reading: "きふ", answer: "口", choices: ["口", "件", "個", "回"] },
+  // 膳（料理セット）
+  { item: "定食", reading: "ていしょく", answer: "膳", choices: ["膳", "皿", "品", "個"] },
+  // 揃（セット）
+  { item: "茶器", reading: "ちゃき", answer: "揃", choices: ["揃", "組", "セット", "個"] },
 ];
 
 export default function App() {
