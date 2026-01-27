@@ -19,10 +19,10 @@ npm install
 
 ### 4. 起動
 ```bash
-npm start
+npm expo start --tunnel
 ```
 
-QRコードが表示されます。
+コンソールで`c`を入力し、QRコードを表示。
 
 ### 5. スマホで確認
 - iOS: カメラアプリでQRコードをスキャン
