@@ -357,6 +357,11 @@ export default function App() {
     }
   };
 
+  const goToTop = () => {
+    setGameStarted(false);
+    setGameOver(false);
+  };
+
   const getScoreMessage = () => {
     const percentage = (score / questions.length) * 100;
     if (percentage === 100) return { emoji: "🎊", message: "完璧！天才です！" };
@@ -420,6 +425,9 @@ export default function App() {
       <ScrollView contentContainerStyle={styles.scrollContent}>
         {/* ヘッダー */}
         <View style={styles.header}>
+          <TouchableOpacity style={styles.backButton} onPress={goToTop}>
+            <Text style={styles.backButtonText}>←</Text>
+          </TouchableOpacity>
           <View style={styles.progressContainer}>
             <Text style={styles.progressText}>
               {currentQuestion + 1} / {questions.length}
@@ -550,6 +558,20 @@ const styles = StyleSheet.create({
     padding: 12,
     backgroundColor: 'rgba(255,255,255,0.1)',
     borderRadius: 16,
+  },
+  backButton: {
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    backgroundColor: 'rgba(255,255,255,0.2)',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: 12,
+  },
+  backButtonText: {
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: '600',
   },
   progressContainer: {
     flex: 1,
