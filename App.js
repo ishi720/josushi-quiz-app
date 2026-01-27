@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import {
   View,
   Text,
@@ -34,13 +34,10 @@ export default function App() {
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [showResult, setShowResult] = useState(false);
   const [gameOver, setGameOver] = useState(false);
+  const [gameStarted, setGameStarted] = useState(false);
   const [questions, setQuestions] = useState([]);
   const [streak, setStreak] = useState(0);
   const [fadeAnim] = useState(new Animated.Value(1));
-
-  useEffect(() => {
-    startNewGame();
-  }, []);
 
   const shuffleArray = (array) => {
     const shuffled = [...array];
@@ -62,6 +59,7 @@ export default function App() {
     setSelectedAnswer(null);
     setShowResult(false);
     setGameOver(false);
+    setGameStarted(true);
     setStreak(0);
   };
 
@@ -117,10 +115,20 @@ export default function App() {
     return { emoji: "📚", message: "練習しましょう！" };
   };
 
-  if (questions.length === 0) {
+  if (!gameStarted) {
     return (
       <SafeAreaView style={styles.container}>
-        <Text style={styles.loading}>読み込み中...</Text>
+        <View style={styles.startScreen}>
+          <Text style={styles.startEmoji}>📚</Text>
+          <Text style={styles.startTitle}>助数詞クイズ</Text>
+          <Text style={styles.startSubtitle}>日本語の数え方を学ぼう！</Text>
+          <View style={styles.startInfo}>
+            <Text style={styles.startInfoText}>全10問</Text>
+          </View>
+          <TouchableOpacity style={styles.startButton} onPress={startNewGame}>
+            <Text style={styles.startButtonText}>スタート</Text>
+          </TouchableOpacity>
+        </View>
       </SafeAreaView>
     );
   }
@@ -555,5 +563,57 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 16,
     fontWeight: '600',
+  },
+  // スタート画面
+  startScreen: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 32,
+  },
+  startEmoji: {
+    fontSize: 80,
+    marginBottom: 24,
+  },
+  startTitle: {
+    fontSize: 36,
+    fontWeight: '800',
+    color: '#fff',
+    marginBottom: 12,
+    letterSpacing: 4,
+  },
+  startSubtitle: {
+    fontSize: 16,
+    color: 'rgba(255,255,255,0.7)',
+    marginBottom: 40,
+  },
+  startInfo: {
+    backgroundColor: 'rgba(255,255,255,0.1)',
+    paddingVertical: 12,
+    paddingHorizontal: 24,
+    borderRadius: 20,
+    marginBottom: 40,
+  },
+  startInfoText: {
+    color: 'rgba(255,255,255,0.8)',
+    fontSize: 14,
+    fontWeight: '600',
+  },
+  startButton: {
+    backgroundColor: '#e94560',
+    paddingVertical: 20,
+    paddingHorizontal: 60,
+    borderRadius: 20,
+    shadowColor: '#e94560',
+    shadowOffset: { width: 0, height: 10 },
+    shadowOpacity: 0.5,
+    shadowRadius: 15,
+    elevation: 8,
+  },
+  startButtonText: {
+    color: '#fff',
+    fontSize: 20,
+    fontWeight: '700',
+    letterSpacing: 4,
   },
 });
