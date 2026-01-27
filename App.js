@@ -71,6 +71,102 @@ const quizData = [
   { item: "兎", reading: "うさぎ", answer: "羽", choices: ["羽", "匹", "頭", "本"] },
   { item: "鳩", reading: "はと", answer: "羽", choices: ["羽", "匹", "頭", "枚"] },
   { item: "蝶", reading: "ちょう", answer: "羽", choices: ["羽", "匹", "頭", "枚"] },
+  // === 難易度高め（50問）===
+  // 杯（イカ・タコ・船）
+  { item: "烏賊", reading: "いか", answer: "杯", choices: ["杯", "匹", "本", "頭"] },
+  { item: "蛸", reading: "たこ", answer: "杯", choices: ["杯", "匹", "本", "頭"] },
+  { item: "蟹", reading: "かに", answer: "杯", choices: ["杯", "匹", "頭", "個"] },
+  // 膳（箸・食事）
+  { item: "箸", reading: "はし", answer: "膳", choices: ["膳", "本", "組", "対"] },
+  { item: "お膳", reading: "おぜん", answer: "膳", choices: ["膳", "台", "個", "枚"] },
+  // 基（大型構造物）
+  { item: "鳥居", reading: "とりい", answer: "基", choices: ["基", "本", "門", "台"] },
+  { item: "エレベーター", reading: "エレベーター", answer: "基", choices: ["基", "台", "機", "本"] },
+  { item: "墓", reading: "はか", answer: "基", choices: ["基", "個", "体", "本"] },
+  { item: "ピラミッド", reading: "ピラミッド", answer: "基", choices: ["基", "個", "棟", "台"] },
+  { item: "灯籠", reading: "とうろう", answer: "基", choices: ["基", "本", "台", "個"] },
+  // 反・疋（布・織物）
+  { item: "反物", reading: "たんもの", answer: "反", choices: ["反", "枚", "本", "巻"] },
+  { item: "絹織物", reading: "きぬおりもの", answer: "反", choices: ["反", "枚", "巻", "本"] },
+  // 棹（タンス・三味線）
+  { item: "箪笥", reading: "たんす", answer: "棹", choices: ["棹", "台", "個", "本"] },
+  { item: "三味線", reading: "しゃみせん", answer: "棹", choices: ["棹", "本", "台", "挺"] },
+  // 張（テント・弓・傘）
+  { item: "テント", reading: "テント", answer: "張", choices: ["張", "個", "台", "本"] },
+  { item: "弓", reading: "ゆみ", answer: "張", choices: ["張", "本", "挺", "丁"] },
+  { item: "蚊帳", reading: "かや", answer: "張", choices: ["張", "枚", "本", "個"] },
+  // 挺（銃・ろうそく・人力車）
+  { item: "拳銃", reading: "けんじゅう", answer: "挺", choices: ["挺", "本", "丁", "個"] },
+  { item: "蝋燭", reading: "ろうそく", answer: "挺", choices: ["挺", "本", "個", "灯"] },
+  { item: "人力車", reading: "じんりきしゃ", answer: "挺", choices: ["挺", "台", "両", "個"] },
+  // 艘・隻（船）
+  { item: "漁船", reading: "ぎょせん", answer: "艘", choices: ["艘", "隻", "台", "本"] },
+  { item: "軍艦", reading: "ぐんかん", answer: "隻", choices: ["隻", "艘", "台", "基"] },
+  { item: "ボート", reading: "ボート", answer: "艘", choices: ["艘", "台", "隻", "本"] },
+  // 棟（建物）
+  { item: "ビル", reading: "ビル", answer: "棟", choices: ["棟", "軒", "基", "本"] },
+  { item: "倉庫", reading: "そうこ", answer: "棟", choices: ["棟", "軒", "個", "基"] },
+  // 軒（家・店）
+  { item: "民家", reading: "みんか", answer: "軒", choices: ["軒", "棟", "戸", "件"] },
+  { item: "商店", reading: "しょうてん", answer: "軒", choices: ["軒", "店", "棟", "件"] },
+  // 脚（椅子・机）
+  { item: "椅子", reading: "いす", answer: "脚", choices: ["脚", "台", "個", "本"] },
+  { item: "机", reading: "つくえ", answer: "脚", choices: ["脚", "台", "個", "本"] },
+  // 口（刀・井戸・口座）
+  { item: "井戸", reading: "いど", answer: "口", choices: ["口", "個", "基", "本"] },
+  { item: "口座", reading: "こうざ", answer: "口", choices: ["口", "個", "件", "本"] },
+  // 振・口（刀剣）
+  { item: "刀", reading: "かたな", answer: "振", choices: ["振", "本", "口", "挺"] },
+  { item: "太刀", reading: "たち", answer: "振", choices: ["振", "本", "口", "挺"] },
+  // 面（鏡・琴・面）
+  { item: "鏡", reading: "かがみ", answer: "面", choices: ["面", "枚", "個", "台"] },
+  { item: "琴", reading: "こと", answer: "面", choices: ["面", "台", "張", "本"] },
+  { item: "能面", reading: "のうめん", answer: "面", choices: ["面", "枚", "個", "体"] },
+  // 領（鎧・袴）
+  { item: "鎧", reading: "よろい", answer: "領", choices: ["領", "着", "体", "具"] },
+  { item: "袴", reading: "はかま", answer: "領", choices: ["領", "着", "枚", "本"] },
+  // 柱（神様）
+  { item: "神様", reading: "かみさま", answer: "柱", choices: ["柱", "体", "人", "尊"] },
+  // 座（山・星座）
+  { item: "富士山", reading: "ふじさん", answer: "座", choices: ["座", "山", "個", "基"] },
+  { item: "星座", reading: "せいざ", answer: "座", choices: ["座", "個", "群", "点"] },
+  // 貫（寿司）
+  { item: "寿司", reading: "すし", answer: "貫", choices: ["貫", "個", "皿", "切"] },
+  { item: "握り寿司", reading: "にぎりずし", answer: "貫", choices: ["貫", "個", "皿", "点"] },
+  // 服・包（薬）
+  { item: "漢方薬", reading: "かんぽうやく", answer: "服", choices: ["服", "包", "錠", "個"] },
+  { item: "粉薬", reading: "こなぐすり", answer: "包", choices: ["包", "服", "袋", "個"] },
+  // 帖（畳・海苔）
+  { item: "畳", reading: "たたみ", answer: "帖", choices: ["帖", "枚", "畳", "面"] },
+  { item: "海苔", reading: "のり", answer: "帖", choices: ["帖", "枚", "束", "個"] },
+  // 丁（豆腐・包丁）
+  { item: "豆腐", reading: "とうふ", answer: "丁", choices: ["丁", "個", "切", "塊"] },
+  { item: "包丁", reading: "ほうちょう", answer: "丁", choices: ["丁", "本", "挺", "個"] },
+  // 首（短歌・俳句）
+  { item: "短歌", reading: "たんか", answer: "首", choices: ["首", "句", "編", "本"] },
+  { item: "和歌", reading: "わか", answer: "首", choices: ["首", "句", "編", "節"] },
+  // 句（俳句）
+  { item: "俳句", reading: "はいく", answer: "句", choices: ["句", "首", "編", "節"] },
+  { item: "川柳", reading: "せんりゅう", answer: "句", choices: ["句", "首", "本", "編"] },
+  // 局（将棋・囲碁）
+  { item: "将棋", reading: "しょうぎ", answer: "局", choices: ["局", "戦", "回", "番"] },
+  { item: "囲碁", reading: "いご", answer: "局", choices: ["局", "戦", "回", "番"] },
+  // 番（相撲）
+  { item: "相撲", reading: "すもう", answer: "番", choices: ["番", "回", "戦", "局"] },
+  // 幕（劇）
+  { item: "芝居", reading: "しばい", answer: "幕", choices: ["幕", "回", "場", "本"] },
+  { item: "オペラ", reading: "オペラ", answer: "幕", choices: ["幕", "曲", "回", "場"] },
+  // 席（落語・寄席）
+  { item: "落語", reading: "らくご", answer: "席", choices: ["席", "話", "本", "回"] },
+  // 体（人形・仏像）
+  { item: "仏像", reading: "ぶつぞう", answer: "体", choices: ["体", "柱", "尊", "基"] },
+  { item: "人形", reading: "にんぎょう", answer: "体", choices: ["体", "個", "本", "匹"] },
+  { item: "ミイラ", reading: "ミイラ", answer: "体", choices: ["体", "個", "人", "匹"] },
+  // 門（大砲）
+  { item: "大砲", reading: "たいほう", answer: "門", choices: ["門", "台", "基", "挺"] },
+  // 条（法律・川）
+  { item: "法律", reading: "ほうりつ", answer: "条", choices: ["条", "本", "件", "項"] },
+  { item: "川", reading: "かわ", answer: "条", choices: ["条", "本", "筋", "流"] },
 ];
 
 export default function App() {
