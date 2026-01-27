@@ -9,23 +9,68 @@ import {
   Animated,
 } from 'react-native';
 
-// 助数詞データ
+// 助数詞データ（50問）
 const quizData = [
+  // 本（細長いもの）
   { item: "鉛筆", reading: "えんぴつ", answer: "本", choices: ["本", "枚", "個", "匹"] },
-  { item: "猫", reading: "ねこ", answer: "匹", choices: ["匹", "頭", "羽", "人"] },
-  { item: "紙", reading: "かみ", answer: "枚", choices: ["枚", "本", "冊", "個"] },
-  { item: "本", reading: "ほん", answer: "冊", choices: ["冊", "枚", "本", "台"] },
-  { item: "車", reading: "くるま", answer: "台", choices: ["台", "本", "個", "匹"] },
-  { item: "珈琲", reading: "コーヒー", answer: "杯", choices: ["杯", "個", "本", "枚"] },
-  { item: "林檎", reading: "りんご", answer: "個", choices: ["個", "本", "枚", "匹"] },
-  { item: "学生", reading: "がくせい", answer: "人", choices: ["人", "匹", "頭", "本"] },
-  { item: "象", reading: "ぞう", answer: "頭", choices: ["頭", "匹", "羽", "本"] },
-  { item: "鳥", reading: "とり", answer: "羽", choices: ["羽", "匹", "頭", "枚"] },
-  { item: "皿", reading: "さら", answer: "枚", choices: ["枚", "本", "着", "個"] },
-  { item: "犬", reading: "いぬ", answer: "匹", choices: ["匹", "頭", "羽", "人"] },
   { item: "傘", reading: "かさ", answer: "本", choices: ["本", "枚", "個", "台"] },
-  { item: "電話", reading: "でんわ", answer: "台", choices: ["台", "個", "本", "枚"] },
+  { item: "ネクタイ", reading: "ネクタイ", answer: "本", choices: ["本", "枚", "着", "個"] },
+  { item: "バナナ", reading: "バナナ", answer: "本", choices: ["本", "個", "枚", "房"] },
+  { item: "木", reading: "き", answer: "本", choices: ["本", "枚", "個", "台"] },
+  // 匹（小動物）
+  { item: "猫", reading: "ねこ", answer: "匹", choices: ["匹", "頭", "羽", "人"] },
+  { item: "犬", reading: "いぬ", answer: "匹", choices: ["匹", "頭", "羽", "人"] },
   { item: "魚", reading: "さかな", answer: "匹", choices: ["匹", "本", "羽", "頭"] },
+  { item: "虫", reading: "むし", answer: "匹", choices: ["匹", "羽", "頭", "個"] },
+  { item: "蛙", reading: "かえる", answer: "匹", choices: ["匹", "羽", "頭", "本"] },
+  // 枚（薄いもの）
+  { item: "紙", reading: "かみ", answer: "枚", choices: ["枚", "本", "冊", "個"] },
+  { item: "皿", reading: "さら", answer: "枚", choices: ["枚", "本", "着", "個"] },
+  { item: "切手", reading: "きって", answer: "枚", choices: ["枚", "個", "本", "冊"] },
+  { item: "写真", reading: "しゃしん", answer: "枚", choices: ["枚", "冊", "本", "個"] },
+  { item: "葉っぱ", reading: "はっぱ", answer: "枚", choices: ["枚", "本", "個", "束"] },
+  // 冊（本・ノート）
+  { item: "本", reading: "ほん", answer: "冊", choices: ["冊", "枚", "本", "台"] },
+  { item: "雑誌", reading: "ざっし", answer: "冊", choices: ["冊", "枚", "部", "本"] },
+  { item: "ノート", reading: "ノート", answer: "冊", choices: ["冊", "枚", "本", "個"] },
+  { item: "辞書", reading: "じしょ", answer: "冊", choices: ["冊", "本", "枚", "部"] },
+  { item: "漫画", reading: "まんが", answer: "冊", choices: ["冊", "枚", "本", "巻"] },
+  // 台（機械・乗り物）
+  { item: "車", reading: "くるま", answer: "台", choices: ["台", "本", "個", "匹"] },
+  { item: "電話", reading: "でんわ", answer: "台", choices: ["台", "個", "本", "枚"] },
+  { item: "パソコン", reading: "パソコン", answer: "台", choices: ["台", "個", "本", "枚"] },
+  { item: "テレビ", reading: "テレビ", answer: "台", choices: ["台", "個", "本", "枚"] },
+  { item: "自転車", reading: "じてんしゃ", answer: "台", choices: ["台", "本", "個", "輪"] },
+  // 杯（飲み物・ご飯）
+  { item: "珈琲", reading: "コーヒー", answer: "杯", choices: ["杯", "個", "本", "枚"] },
+  { item: "お茶", reading: "おちゃ", answer: "杯", choices: ["杯", "本", "個", "枚"] },
+  { item: "ご飯", reading: "ごはん", answer: "杯", choices: ["杯", "個", "枚", "膳"] },
+  { item: "ラーメン", reading: "ラーメン", answer: "杯", choices: ["杯", "個", "本", "皿"] },
+  { item: "味噌汁", reading: "みそしる", answer: "杯", choices: ["杯", "個", "椀", "皿"] },
+  // 個（小さいもの）
+  { item: "林檎", reading: "りんご", answer: "個", choices: ["個", "本", "枚", "匹"] },
+  { item: "卵", reading: "たまご", answer: "個", choices: ["個", "枚", "本", "匹"] },
+  { item: "消しゴム", reading: "けしゴム", answer: "個", choices: ["個", "本", "枚", "冊"] },
+  { item: "石", reading: "いし", answer: "個", choices: ["個", "本", "枚", "匹"] },
+  { item: "飴", reading: "あめ", answer: "個", choices: ["個", "本", "枚", "粒"] },
+  // 人
+  { item: "学生", reading: "がくせい", answer: "人", choices: ["人", "匹", "頭", "本"] },
+  { item: "先生", reading: "せんせい", answer: "人", choices: ["人", "名", "匹", "頭"] },
+  { item: "子供", reading: "こども", answer: "人", choices: ["人", "匹", "名", "頭"] },
+  { item: "友達", reading: "ともだち", answer: "人", choices: ["人", "名", "匹", "組"] },
+  { item: "客", reading: "きゃく", answer: "人", choices: ["人", "名", "組", "匹"] },
+  // 頭（大きい動物）
+  { item: "象", reading: "ぞう", answer: "頭", choices: ["頭", "匹", "羽", "本"] },
+  { item: "牛", reading: "うし", answer: "頭", choices: ["頭", "匹", "羽", "本"] },
+  { item: "馬", reading: "うま", answer: "頭", choices: ["頭", "匹", "羽", "本"] },
+  { item: "ライオン", reading: "ライオン", answer: "頭", choices: ["頭", "匹", "羽", "本"] },
+  { item: "熊", reading: "くま", answer: "頭", choices: ["頭", "匹", "羽", "本"] },
+  // 羽（鳥・うさぎ）
+  { item: "鳥", reading: "とり", answer: "羽", choices: ["羽", "匹", "頭", "枚"] },
+  { item: "鶏", reading: "にわとり", answer: "羽", choices: ["羽", "匹", "頭", "本"] },
+  { item: "兎", reading: "うさぎ", answer: "羽", choices: ["羽", "匹", "頭", "本"] },
+  { item: "鳩", reading: "はと", answer: "羽", choices: ["羽", "匹", "頭", "枚"] },
+  { item: "蝶", reading: "ちょう", answer: "羽", choices: ["羽", "匹", "頭", "枚"] },
 ];
 
 export default function App() {
