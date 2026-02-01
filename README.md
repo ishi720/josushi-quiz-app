@@ -19,7 +19,7 @@ npm install
 
 ### 4. 起動
 ```bash
-npm expo start --tunnel
+npx  expo start --tunnel
 ```
 
 コンソールで`c`を入力し、QRコードを表示。
