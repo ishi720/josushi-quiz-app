@@ -270,7 +270,7 @@ export const quizData = [
   // 階（フロア）- 中級
   { item: "階段", reading: "かいだん", answer: "階", choices: ["階", "段", "本", "個"], difficulty: "intermediate" },
   { item: "建物の階", reading: "たてもののかい", answer: "階", choices: ["階", "層", "段", "棟"], difficulty: "intermediate" },
-  { item: "マンションの階", reading: "マンションのかい", answer: "階", choices: ["階", "層", "棟", "室"], difficulty: "intermediate" },
+  //{ item: "マンションの階", reading: "マンションのかい", answer: "階", choices: ["階", "層", "棟", "室"], difficulty: "intermediate" },
   // 泊（宿泊）- 中級
   { item: "ホテル宿泊", reading: "ホテルしゅくはく", answer: "泊", choices: ["泊", "晩", "夜", "日"], difficulty: "intermediate" },
   { item: "旅行", reading: "りょこう", answer: "泊", choices: ["泊", "日", "回", "度"], difficulty: "intermediate" },
@@ -316,7 +316,7 @@ export const quizData = [
   { item: "階段の段", reading: "かいだんのだん", answer: "段", choices: ["段", "階", "本", "個"], difficulty: "advanced" },
   { item: "棚の段", reading: "たなのだん", answer: "段", choices: ["段", "階", "列", "本"], difficulty: "advanced" },
   // 号（号数・サイズ）
-  { item: "雑誌の号", reading: "ざっしのごう", answer: "号", choices: ["号", "巻", "冊", "部"], difficulty: "advanced" },
+  //{ item: "雑誌の号", reading: "ざっしのごう", answer: "号", choices: ["号", "巻", "冊", "部"], difficulty: "advanced" },
   { item: "サイズ", reading: "サイズ", answer: "号", choices: ["号", "番", "個", "枚"], difficulty: "advanced" },
   { item: "台風", reading: "たいふう", answer: "号", choices: ["号", "個", "発", "回"], difficulty: "advanced" },
   // 章（チャプター）
@@ -680,20 +680,20 @@ export const quizData = [
   // 系統（けいとう）
   { item: "バスの系統", reading: "バスのけいとう", answer: "系統", choices: ["系統", "線", "本", "便"], difficulty: "advanced" },
   // 便（びん）
-  { item: "バス便", reading: "バスびん", answer: "便", choices: ["便", "本", "回", "台"], difficulty: "advanced" },
+  //{ item: "バス便", reading: "バスびん", answer: "便", choices: ["便", "本", "回", "台"], difficulty: "advanced" },
   // 航路（こうろ）
   { item: "船の航路", reading: "ふねのこうろ", answer: "航路", choices: ["航路", "便", "線", "隻"], difficulty: "advanced" },
   // 波（なみ）
   { item: "波", reading: "なみ", answer: "波", choices: ["波", "個", "筋", "本"], difficulty: "advanced" },
   // 塊（かたまり）
-  { item: "氷の塊", reading: "こおりのかたまり", answer: "塊", choices: ["塊", "個", "粒", "切れ"], difficulty: "advanced" },
-  { item: "土の塊", reading: "つちのかたまり", answer: "塊", choices: ["塊", "個", "粒", "山"], difficulty: "advanced" },
+  //{ item: "氷の塊", reading: "こおりのかたまり", answer: "塊", choices: ["塊", "個", "粒", "切れ"], difficulty: "advanced" },
+  //{ item: "土の塊", reading: "つちのかたまり", answer: "塊", choices: ["塊", "個", "粒", "山"], difficulty: "advanced" },
   // 山（やま）
-  { item: "書類の山", reading: "しょるいのやま", answer: "山", choices: ["山", "束", "個", "部"], difficulty: "advanced" },
+  //{ item: "書類の山", reading: "しょるいのやま", answer: "山", choices: ["山", "束", "個", "部"], difficulty: "advanced" },
   // 盛り（もり）
-  { item: "ご飯の盛り", reading: "ごはんのもり", answer: "盛り", choices: ["盛り", "杯", "膳", "皿"], difficulty: "advanced" },
+  //{ item: "ご飯の盛り", reading: "ごはんのもり", answer: "盛り", choices: ["盛り", "杯", "膳", "皿"], difficulty: "advanced" },
   // 釜（かま）
-  { item: "ご飯の釜", reading: "ごはんのかま", answer: "釜", choices: ["釜", "杯", "膳", "個"], difficulty: "advanced" },
+  //{ item: "ご飯の釜", reading: "ごはんのかま", answer: "釜", choices: ["釜", "杯", "膳", "個"], difficulty: "advanced" },
   // 膳（ぜん・別用途）
   { item: "懐石料理", reading: "かいせきりょうり", answer: "献", choices: ["献", "膳", "皿", "品"], difficulty: "advanced" },
   // 客（きゃく）
@@ -711,7 +711,7 @@ export const quizData = [
   // 輿（こし・別用途）
   { item: "お神輿", reading: "おみこし", answer: "基", choices: ["基", "台", "輿", "本"], difficulty: "advanced" },
   // 緒（お）
-  { item: "草履の緒", reading: "ぞうりのお", answer: "緒", choices: ["緒", "本", "筋", "組"], difficulty: "advanced" },
+  //{ item: "草履の緒", reading: "ぞうりのお", answer: "緒", choices: ["緒", "本", "筋", "組"], difficulty: "advanced" },
   // 襲（かさね）
   { item: "十二単", reading: "じゅうにひとえ", answer: "襲", choices: ["襲", "枚", "着", "重"], difficulty: "advanced" },
   // 揃（そろい・食器）
@@ -723,17 +723,17 @@ export const quizData = [
   // 玉（たま・糸）
   { item: "毛糸玉", reading: "けいとだま", answer: "玉", choices: ["玉", "個", "巻", "束"], difficulty: "advanced" },
   // 撚り（より）
-  { item: "糸の撚り", reading: "いとのより", answer: "撚り", choices: ["撚り", "本", "筋", "巻"], difficulty: "advanced" },
+  //{ item: "糸の撚り", reading: "いとのより", answer: "撚り", choices: ["撚り", "本", "筋", "巻"], difficulty: "advanced" },
   // かせ（綛）
-  { item: "糸のかせ", reading: "いとのかせ", answer: "かせ", choices: ["かせ", "巻", "束", "玉"], difficulty: "advanced" },
+  //{ item: "糸のかせ", reading: "いとのかせ", answer: "かせ", choices: ["かせ", "巻", "束", "玉"], difficulty: "advanced" },
   // 締め（しめ）
-  { item: "鰹節の締め", reading: "かつおぶしのしめ", answer: "締め", choices: ["締め", "本", "個", "節"], difficulty: "advanced" },
+  //{ item: "鰹節の締め", reading: "かつおぶしのしめ", answer: "締め", choices: ["締め", "本", "個", "節"], difficulty: "advanced" },
   // 棹（さお・羊羹）
   { item: "羊羹", reading: "ようかん", answer: "棹", choices: ["棹", "本", "個", "切れ"], difficulty: "advanced" },
   // 連（れん・数珠）
   { item: "数珠", reading: "じゅず", answer: "連", choices: ["連", "本", "輪", "個"], difficulty: "advanced" },
   // 腰（こし・刀）
-  { item: "刀（腰に差す）", reading: "かたなこしにさす", answer: "腰", choices: ["腰", "振", "本", "口"], difficulty: "advanced" },
+  //{ item: "刀（腰に差す）", reading: "かたなこしにさす", answer: "腰", choices: ["腰", "振", "本", "口"], difficulty: "advanced" },
   // 口（くち・釜）
   { item: "茶釜", reading: "ちゃがま", answer: "口", choices: ["口", "個", "釜", "基"], difficulty: "advanced" },
   // 壁（かべ・困難）
@@ -747,29 +747,29 @@ export const quizData = [
   // 畳（じょう・たたみ）
   { item: "部屋の広さ", reading: "へやのひろさ", answer: "畳", choices: ["畳", "坪", "間", "帖"], difficulty: "advanced" },
   // 間（けん・長さ）
-  { item: "長さ（伝統単位）", reading: "ながさでんとうたんい", answer: "間", choices: ["間", "尺", "寸", "丈"], difficulty: "advanced" },
+  //{ item: "長さ（伝統単位）", reading: "ながさでんとうたんい", answer: "間", choices: ["間", "尺", "寸", "丈"], difficulty: "advanced" },
   // 丈（じょう）
-  { item: "高さ（伝統単位）", reading: "たかさでんとうたんい", answer: "丈", choices: ["丈", "尺", "間", "寸"], difficulty: "advanced" },
+  //{ item: "高さ（伝統単位）", reading: "たかさでんとうたんい", answer: "丈", choices: ["丈", "尺", "間", "寸"], difficulty: "advanced" },
   // 勺（しゃく）
   { item: "少量の酒", reading: "しょうりょうのさけ", answer: "勺", choices: ["勺", "合", "升", "杯"], difficulty: "advanced" },
   // 斗（と）
   { item: "大量の酒", reading: "たいりょうのさけ", answer: "斗", choices: ["斗", "升", "石", "合"], difficulty: "advanced" },
   // 貫（かんめ・重さ）
-  { item: "重さ（伝統単位）", reading: "おもさでんとうたんい", answer: "貫", choices: ["貫", "斤", "両", "匁"], difficulty: "advanced" },
+  //{ item: "重さ（伝統単位）", reading: "おもさでんとうたんい", answer: "貫", choices: ["貫", "斤", "両", "匁"], difficulty: "advanced" },
   // 匁（もんめ）
   { item: "真珠の重さ", reading: "しんじゅのおもさ", answer: "匁", choices: ["匁", "貫", "両", "分"], difficulty: "advanced" },
   // 厘（りん）
-  { item: "打率", reading: "だりつ", answer: "厘", choices: ["厘", "分", "割", "毛"], difficulty: "advanced" },
+  //{ item: "打率", reading: "だりつ", answer: "厘", choices: ["厘", "分", "割", "毛"], difficulty: "advanced" },
   // 毛（もう）
-  { item: "打率（細かい）", reading: "だりつこまかい", answer: "毛", choices: ["毛", "厘", "分", "割"], difficulty: "advanced" },
+  //{ item: "打率（細かい）", reading: "だりつこまかい", answer: "毛", choices: ["毛", "厘", "分", "割"], difficulty: "advanced" },
   // 分（ぶ・割合）
   { item: "確率", reading: "かくりつ", answer: "分", choices: ["分", "割", "厘", "％"], difficulty: "advanced" },
   // カラット
   { item: "ダイヤモンド", reading: "ダイヤモンド", answer: "カラット", choices: ["カラット", "粒", "個", "石"], difficulty: "advanced" },
   // 月（げつ・期間）
-  { item: "期間（月）", reading: "きかんつき", answer: "月", choices: ["月", "週", "日", "年"], difficulty: "advanced" },
+  //{ item: "期間（月）", reading: "きかんつき", answer: "月", choices: ["月", "週", "日", "年"], difficulty: "advanced" },
   // 年（ねん・期間）
-  { item: "期間（年）", reading: "きかんねん", answer: "年", choices: ["年", "月", "期", "代"], difficulty: "advanced" },
+  //{ item: "期間（年）", reading: "きかんねん", answer: "年", choices: ["年", "月", "期", "代"], difficulty: "advanced" },
   // 代（だい・料金）
   { item: "電話料金", reading: "でんわりょうきん", answer: "代", choices: ["代", "円", "回", "件"], difficulty: "advanced" },
   // 台（だい・広さ）
@@ -777,16 +777,16 @@ export const quizData = [
   // 番（ばん・順番）
   { item: "順番", reading: "じゅんばん", answer: "番", choices: ["番", "位", "着", "等"], difficulty: "advanced" },
   // 膳（ぜん・寿司）
-  { item: "回転寿司の皿", reading: "かいてんずしのさら", answer: "皿", choices: ["皿", "貫", "枚", "膳"], difficulty: "advanced" },
+  //{ item: "回転寿司の皿", reading: "かいてんずしのさら", answer: "皿", choices: ["皿", "貫", "枚", "膳"], difficulty: "advanced" },
   // 周（しゅう）
-  { item: "トラックの周回", reading: "トラックのしゅうかい", answer: "周", choices: ["周", "回", "圏", "輪"], difficulty: "advanced" },
-  { item: "地球の周回", reading: "ちきゅうのしゅうかい", answer: "周", choices: ["周", "回", "圏", "輪"], difficulty: "advanced" },
+  //{ item: "トラックの周回", reading: "トラックのしゅうかい", answer: "周", choices: ["周", "回", "圏", "輪"], difficulty: "advanced" },
+  //{ item: "地球の周回", reading: "ちきゅうのしゅうかい", answer: "周", choices: ["周", "回", "圏", "輪"], difficulty: "advanced" },
   // 巡（じゅん）
-  { item: "巡回", reading: "じゅんかい", answer: "巡", choices: ["巡", "回", "周", "度"], difficulty: "advanced" },
+  //{ item: "巡回", reading: "じゅんかい", answer: "巡", choices: ["巡", "回", "周", "度"], difficulty: "advanced" },
   // 廻り（まわり）
   { item: "見回り", reading: "みまわり", answer: "回", choices: ["回", "廻り", "周", "巡"], difficulty: "advanced" },
   // 版（はん）
-  { item: "本の版", reading: "ほんのはん", answer: "版", choices: ["版", "刷", "冊", "部"], difficulty: "advanced" },
+  //{ item: "本の版", reading: "ほんのはん", answer: "版", choices: ["版", "刷", "冊", "部"], difficulty: "advanced" },
   { item: "ソフトウェアのバージョン", reading: "ソフトウェアのバージョン", answer: "版", choices: ["版", "号", "回", "世代"], difficulty: "advanced" },
   // 刷（さつ・すり）
   { item: "印刷の刷", reading: "いんさつのさつ", answer: "刷", choices: ["刷", "版", "部", "回"], difficulty: "advanced" },
@@ -807,7 +807,7 @@ export const quizData = [
   // 音（おん・おと）
   { item: "和音", reading: "わおん", answer: "音", choices: ["音", "拍", "調", "曲"], difficulty: "advanced" },
   // 声（こえ・せい）
-  { item: "合唱の声部", reading: "がっしょうのせいぶ", answer: "声", choices: ["声", "部", "音", "調"], difficulty: "advanced" },
+  //{ item: "合唱の声部", reading: "がっしょうのせいぶ", answer: "声", choices: ["声", "部", "音", "調"], difficulty: "advanced" },
   // 調（ちょう）
   { item: "楽曲の調", reading: "がっきょくのちょう", answer: "調", choices: ["調", "曲", "音", "楽章"], difficulty: "advanced" },
   // 旋律（せんりつ）
@@ -840,17 +840,17 @@ export const quizData = [
   // 側（がわ・そく）
   { item: "川の両側", reading: "かわのりょうがわ", answer: "側", choices: ["側", "面", "方", "辺"], difficulty: "advanced" },
   // 辺（へん・あたり）
-  { item: "三角形の辺", reading: "さんかっけいのへん", answer: "辺", choices: ["辺", "本", "面", "側"], difficulty: "advanced" },
+  //{ item: "三角形の辺", reading: "さんかっけいのへん", answer: "辺", choices: ["辺", "本", "面", "側"], difficulty: "advanced" },
   // 隅（すみ）
-  { item: "部屋の隅", reading: "へやのすみ", answer: "隅", choices: ["隅", "角", "個", "箇所"], difficulty: "advanced" },
+  //{ item: "部屋の隅", reading: "へやのすみ", answer: "隅", choices: ["隅", "角", "個", "箇所"], difficulty: "advanced" },
   // 角（かど・かく）
-  { item: "四角形の角", reading: "しかっけいのかく", answer: "角", choices: ["角", "隅", "個", "辺"], difficulty: "advanced" },
+  //{ item: "四角形の角", reading: "しかっけいのかく", answer: "角", choices: ["角", "隅", "個", "辺"], difficulty: "advanced" },
   // 端（はし・たん）
-  { item: "テーブルの端", reading: "テーブルのはし", answer: "端", choices: ["端", "側", "辺", "個"], difficulty: "advanced" },
+  //{ item: "テーブルの端", reading: "テーブルのはし", answer: "端", choices: ["端", "側", "辺", "個"], difficulty: "advanced" },
   // 先（さき・せん）
-  { item: "鉛筆の先", reading: "えんぴつのさき", answer: "先", choices: ["先", "本", "個", "端"], difficulty: "advanced" },
+  //{ item: "鉛筆の先", reading: "えんぴつのさき", answer: "先", choices: ["先", "本", "個", "端"], difficulty: "advanced" },
   // 元（もと・げん）
-  { item: "出典の元", reading: "しゅってんのもと", answer: "元", choices: ["元", "個", "件", "箇所"], difficulty: "advanced" },
+  //{ item: "出典の元", reading: "しゅってんのもと", answer: "元", choices: ["元", "個", "件", "箇所"], difficulty: "advanced" },
   // 脈（みゃく）
   { item: "山脈", reading: "さんみゃく", answer: "脈", choices: ["脈", "本", "筋", "条"], difficulty: "advanced" },
   // 通（つう・道）
@@ -874,7 +874,7 @@ export const quizData = [
   // 規（き）
   { item: "社内規定", reading: "しゃないきてい", answer: "規", choices: ["規", "則", "条", "項"], difficulty: "advanced" },
   // 法（ほう）
-  { item: "法律（条文）", reading: "ほうりつじょうぶん", answer: "法", choices: ["法", "条", "則", "項"], difficulty: "advanced" },
+  //{ item: "法律（条文）", reading: "ほうりつじょうぶん", answer: "法", choices: ["法", "条", "則", "項"], difficulty: "advanced" },
   // 令（れい）
   { item: "政令", reading: "せいれい", answer: "令", choices: ["令", "法", "条", "則"], difficulty: "advanced" },
   // 策（さく）
@@ -888,7 +888,7 @@ export const quizData = [
   // 型（かた・けい）
   { item: "血液型", reading: "けつえきがた", answer: "型", choices: ["型", "種", "形", "類"], difficulty: "advanced" },
   // 類（るい）
-  { item: "種類（分類）", reading: "しゅるいぶんるい", answer: "類", choices: ["類", "種", "型", "品"], difficulty: "advanced" },
+  //{ item: "種類（分類）", reading: "しゅるいぶんるい", answer: "類", choices: ["類", "種", "型", "品"], difficulty: "advanced" },
   // 風（ふう）
   { item: "和風", reading: "わふう", answer: "風", choices: ["風", "式", "様", "流"], difficulty: "advanced" },
   // 系（けい）
@@ -928,15 +928,15 @@ export const quizData = [
   // 硬貨（こうか）
   { item: "硬貨", reading: "こうか", answer: "枚", choices: ["枚", "個", "円", "玉"], difficulty: "advanced" },
   // 円（えん）
-  { item: "金額", reading: "きんがく", answer: "円", choices: ["円", "個", "枚", "点"], difficulty: "advanced" },
+  //{ item: "金額", reading: "きんがく", answer: "円", choices: ["円", "個", "枚", "点"], difficulty: "advanced" },
   // ドル
-  { item: "ドル紙幣", reading: "ドルしへい", answer: "ドル", choices: ["ドル", "枚", "個", "札"], difficulty: "advanced" },
+  //{ item: "ドル紙幣", reading: "ドルしへい", answer: "ドル", choices: ["ドル", "枚", "個", "札"], difficulty: "advanced" },
   // ユーロ
   { item: "ユーロ", reading: "ユーロ", answer: "ユーロ", choices: ["ユーロ", "枚", "個", "円"], difficulty: "advanced" },
   // 握り（にぎり）
   { item: "おにぎり", reading: "おにぎり", answer: "個", choices: ["個", "握り", "つ", "膳"], difficulty: "advanced" },
   // 掴み（つかみ）
-  { item: "一掴みの砂", reading: "ひとつかみのすな", answer: "掴み", choices: ["掴み", "握り", "個", "杯"], difficulty: "advanced" },
+  //{ item: "一掴みの砂", reading: "ひとつかみのすな", answer: "掴み", choices: ["掴み", "握り", "個", "杯"], difficulty: "advanced" },
   // 摘み（つまみ）
   { item: "塩一摘み", reading: "しおひとつまみ", answer: "摘み", choices: ["摘み", "匙", "粒", "個"], difficulty: "advanced" },
   // 振（ふり）
@@ -964,11 +964,11 @@ export const quizData = [
   // 塁（るい）
   { item: "塁", reading: "るい", answer: "塁", choices: ["塁", "個", "回", "打"], difficulty: "advanced" },
   // 振（しん・三振）
-  { item: "三振", reading: "さんしん", answer: "振", choices: ["振", "回", "個", "打"], difficulty: "advanced" },
+  //{ item: "三振", reading: "さんしん", answer: "振", choices: ["振", "回", "個", "打"], difficulty: "advanced" },
   // 球（きゅう・四球）
   { item: "フォアボール", reading: "フォアボール", answer: "球", choices: ["球", "回", "個", "打"], difficulty: "advanced" },
   // ゴール
-  { item: "サッカーのゴール", reading: "サッカーのゴール", answer: "ゴール", choices: ["ゴール", "点", "回", "本"], difficulty: "advanced" },
+  //{ item: "サッカーのゴール", reading: "サッカーのゴール", answer: "ゴール", choices: ["ゴール", "点", "回", "本"], difficulty: "advanced" },
   // アシスト
   { item: "アシスト", reading: "アシスト", answer: "アシスト", choices: ["アシスト", "回", "本", "点"], difficulty: "advanced" },
   // シュート
@@ -992,7 +992,7 @@ export const quizData = [
   // 金（きん）
   { item: "金メダル", reading: "きんメダル", answer: "個", choices: ["個", "枚", "金", "つ"], difficulty: "advanced" },
   // トロフィー
-  { item: "トロフィー", reading: "トロフィー", answer: "個", choices: ["個", "本", "つ", "基"], difficulty: "advanced" },
+  //{ item: "トロフィー", reading: "トロフィー", answer: "個", choices: ["個", "本", "つ", "基"], difficulty: "advanced" },
   // 賞状（しょうじょう）
   { item: "賞状", reading: "しょうじょう", answer: "枚", choices: ["枚", "通", "個", "本"], difficulty: "advanced" },
   // 免許（めんきょ）
