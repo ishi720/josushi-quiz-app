@@ -1024,6 +1024,13 @@ const quizData = [
   { item: "目標", reading: "もくひょう", answer: "件", choices: ["件", "個", "つ", "回"], difficulty: "advanced" },
 ];
 
+// 難易度別の問題数をカウント
+const questionCounts = {
+  beginner: quizData.filter(q => q.difficulty === 'beginner').length,
+  intermediate: quizData.filter(q => q.difficulty === 'intermediate').length,
+  advanced: quizData.filter(q => q.difficulty === 'advanced').length,
+};
+
 export default function App() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
@@ -1045,8 +1052,10 @@ export default function App() {
   };
 
   const startNewGame = (difficulty) => {
-    // 各難易度の問題のみを出題（重複なし）
-    const filteredData = quizData.filter(q => q.difficulty === difficulty);
+    // 難易度でフィルタリング（'all'の場合は全問題から出題）
+    const filteredData = difficulty === 'all'
+      ? quizData
+      : quizData.filter(q => q.difficulty === difficulty);
 
     const shuffled = [...filteredData]
       .sort(() => Math.random() - 0.5)
@@ -1132,9 +1141,6 @@ export default function App() {
         <View style={styles.startScreen}>
           <Text style={styles.startEmoji}>📚</Text>
           <Text style={styles.startTitle}>助数詞クイズ</Text>
-          <View style={styles.startInfo}>
-            <Text style={styles.startInfoText}>全10問</Text>
-          </View>
           <Text style={styles.difficultyLabel}>難易度を選択</Text>
           <View style={styles.difficultyContainer}>
             <TouchableOpacity
@@ -1142,21 +1148,28 @@ export default function App() {
               onPress={() => startNewGame('beginner')}
             >
               <Text style={styles.difficultyButtonText}>初級</Text>
-              <Text style={styles.difficultyDescription}>本・枚・個など</Text>
+              <Text style={styles.difficultyDescription}>{questionCounts.beginner}問</Text>
             </TouchableOpacity>
             <TouchableOpacity
               style={[styles.difficultyButton, styles.intermediateButton]}
               onPress={() => startNewGame('intermediate')}
             >
               <Text style={styles.difficultyButtonText}>中級</Text>
-              <Text style={styles.difficultyDescription}>匹・頭・羽なども</Text>
+              <Text style={styles.difficultyDescription}>{questionCounts.intermediate}問</Text>
             </TouchableOpacity>
             <TouchableOpacity
               style={[styles.difficultyButton, styles.advancedButton]}
               onPress={() => startNewGame('advanced')}
             >
               <Text style={styles.difficultyButtonText}>上級</Text>
-              <Text style={styles.difficultyDescription}>すべての助数詞</Text>
+              <Text style={styles.difficultyDescription}>{questionCounts.advanced}問</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={[styles.difficultyButton, styles.randomButton]}
+              onPress={() => startNewGame('all')}
+            >
+              <Text style={styles.difficultyButtonText}>ランダム</Text>
+              <Text style={styles.difficultyDescription}>全{quizData.length}問から出題</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -1679,6 +1692,10 @@ const styles = StyleSheet.create({
   advancedButton: {
     backgroundColor: '#e94560',
     shadowColor: '#e94560',
+  },
+  randomButton: {
+    backgroundColor: '#9b59b6',
+    shadowColor: '#9b59b6',
   },
   difficultyButtonText: {
     color: '#fff',
