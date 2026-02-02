@@ -7,16 +7,12 @@
 - Node.js がインストールされていること
 - Google Play デベロッパーアカウント（登録料 $25）
 
----
-
 ## 1. EAS CLI のインストール
 
 ```bash
 npm install -g eas-cli
 eas login
 ```
-
----
 
 ## 2. app.json の設定
 
@@ -54,8 +50,6 @@ eas login
 | `android.versionCode` | 整数のバージョン番号（更新ごとに +1） |
 | `icon` | アプリアイコン（1024x1024 PNG推奨） |
 
----
-
 ## 3. EAS Build の設定
 
 ```bash
@@ -63,8 +57,6 @@ eas build:configure
 ```
 
 `eas.json` が自動生成されます。
-
----
 
 ## 4. 本番用 AAB をビルド
 
@@ -75,15 +67,11 @@ eas build --platform android --profile production
 - 初回は署名キーが自動生成されます
 - ビルド完了後、AABファイルのダウンロードリンクが表示されます
 
----
-
 ## 5. Google Play Console にアップロード
 
 1. [Google Play Console](https://play.google.com/console) でアプリを作成
 2. **リリース > 製品版** から AAB をアップロード
 3. ストア掲載情報を入力
-
----
 
 ## 6. EAS Submit で自動アップロード（オプション）
 
@@ -92,8 +80,6 @@ eas submit --platform android
 ```
 
 Google Play の API キーを設定すれば、自動でアップロード可能です。
-
----
 
 ## 必要なアセット一覧
 
@@ -105,8 +91,6 @@ Google Play の API キーを設定すれば、自動でアップロード可能
 | スクリーンショット | 1080x1920 | ストア掲載用（最低2枚） |
 | フィーチャーグラフィック | 1024x500 | ストアのヘッダー画像 |
 
----
-
 ## ストア掲載に必要な情報
 
 - **アプリ名**: 最大30文字
@@ -115,8 +99,6 @@ Google Play の API キーを設定すれば、自動でアップロード可能
 - **カテゴリ**: 教育 / トリビア など
 - **プライバシーポリシーURL**: 必須
 - **コンテンツレーティング**: アンケート回答で取得
-
----
 
 ## 更新時の手順
 
